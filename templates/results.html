@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Chat Analysis Results
+{% endblock %}
+
+{% block main %}
+<div class="grad" id= "grad2" style="padding-top: 50px;">
+  <h1 style="text-align: center; color: white;">Chat Analysis Results</h1>
+  <div class="center" style="text-align: center; color: rgb(224, 224, 224);">
+  {% for key, value in jsonfile.items() %}
+    {{ key }} : {{ value }}
+    <br>
+  {% endfor %}
+  </div>
+  <div id="content" class="center" style="text-align: center; color: white;">
+    <h5>Number of messages each day of all years</h5>
+    <img src="{{ img1 }}" alt="Chart" height="400px" width="400px">
+    <br>
+    <br>
+
+    <h5>Number of messages per user</h5>
+    <img src="{{ img2 }}" alt="Chart" height="400px" width="400px">
+    <br>
+  </div>
+  </div>
+{% endblock %}

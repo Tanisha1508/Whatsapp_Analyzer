@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <!-- bootstrap css -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- css file -->
+  <link href="static/style.css" rel="stylesheet"></link>
+  <title>{% block title %}{% endblock %}</title>
+  {% block head %}{% endblock %}
+</head>
+
+<body>
+  <main>
+    <header class="site-header">
+      <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+        <div class="container">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarToggle">
+            <div class="navbar-nav mr-auto" >
+              <a class="nav-item nav-link" href="{{ url_for('home') }}" style="font-size: large;">Home</a>
+              <a class="nav-item nav-link" href="{{ url_for('about') }}" style="font-size: large;">Instructions</a>
+              <a class="nav-item nav-link" href="{{ url_for('limitations') }}" style="font-size: large;">Limitations</a>
+              <a class="nav-item nav-link" href="https://www.linkedin.com/in/tanisha-garg-8b417a171" style="font-size: large;">Contact</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+  </header>
+  <div class="grad" id="grad1">
+    {% block main %}{% endblock %}
+  </div>
+  </main>
+  <footer class="page-footer mt-auto">
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" style="color:#020505">© 2021 Copyright:
+      Built by <a href="https://www.linkedin.com/in/tanisha-garg-8b417a171" style="color:#00003b">Tanisha Garg</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</body>

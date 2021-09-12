@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+    WhatsApp Chat Analyzer
+{% endblock %}
+
+{% block main %}
+<div class="grad" id="grad1" style="padding-top: 150px;">
+<div class="center">
+  <h1>WhatsApp Chat Analyzer</h1>
+  <h2>Select file to upload</h2>
+  <p>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+      <p class=flashes>
+      {% for message in messages %}
+        <h5>{{ message }}</h5>
+      {% endfor %}
+      </p>
+      {% endif %}
+    {% endwith %}
+  </p>
+  </div>
+  <div class="center" >
+  <form method="post" enctype="multipart/form-data">
+    <div class="center">
+      <!-- TODO: process zip files -->
+      <label for="chat_file" ><h5 style="color: white;">Choose Android chat to analyze (txt)</h5></label>
+      <input type="file" id="chat_file" name="chat_file" accept="text/plain, application/zip" autocomplete="off" required>
+    </div>
+    <div class="center">
+      <button class="btn" type="submit" id="analyze_btn" name="analyze_btn" >Analyze</button>
+    </div>
+  </form>
+  </div>
+  </div>
+</div>
+{% endblock %}
