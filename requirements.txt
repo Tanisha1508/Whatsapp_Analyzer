@@ -7,7 +7,7 @@ Jinja2==2.11.2
 Markdown==3.3.4
 MarkupSafe==1.1.1
 matplotlib==3.2.2
-numpy==1.19.5
+numpy==1.21.2
 pandas==1.1.4
 plotly==4.12.0
 seaborn==0.11.0
