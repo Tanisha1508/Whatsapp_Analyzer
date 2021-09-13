@@ -129,7 +129,7 @@ def plt_num_msgsperday(date):
     plt.ylabel('No. of messages')
     plt.title('No. of messages each day')
     plt.legend()
-    plt.savefig('C://Users//Admin//Documents//Python Scripts//Whatsapp Analyzer//static//images//plot1.png')
+    plt.savefig('static//images//plot1.png')
     # plt.show()
 
 
@@ -180,7 +180,7 @@ def plot_num_msgs_per_user(users_cnt):
     plt.pie([i[1] for i in top_users], labels=[i[0] for i in top_users],colors=cols, startangle=90, shadow=True, autopct='%1.1f%%')
     plt.title('Top Active Users')
     plt.legend(loc=(.65,-0.12))
-    plt.savefig('C://Users//Admin//Documents//Python Scripts//Whatsapp Analyzer//static//images//plot2.png')
+    plt.savefig('static//images//plot2.png')
     # plt.show()
 
 
@@ -299,7 +299,7 @@ def most_active_time(date,d1):
     plt.ylabel('no of messages')
     plt.title('MOST ACTIVE TIME\nOF '+date)
     plt.legend()
-    #plt.savefig('C://Users//Admin//Documents//Python Scripts//Whatsapp Analyzer//static//images//plot3.png')
+    #plt.savefig('static//images//plot3.png')
     # plt.show()
 
 
